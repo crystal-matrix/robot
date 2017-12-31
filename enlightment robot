@@ -1,0 +1,123 @@
+import tensorflow as tf
+import numpy as np
+import random
+import matplotlib.pyplot as plt
+
+#五毒的初始化，可改为十不善业或者比丘尼戒中的不善业
+corrupt=tf.Variable(tf.random_normal())
+hate=tf.Variable(tf.random_normal())
+delusion=tf.Variable(tf.random_normal())
+Pride=tf.Variable(tf.random_normal())
+suspect=tf.Variable(tf.random_normal())
+#业的初始值
+Karma=tf.Variable(tf.random_normal())
+#五蕴的初始化
+eye=tf.Variable(tf.random_normal())
+hear=tf.Variable(tf.random_normal())
+nose=tf.Variable(tf.random_normal())
+tongue=tf.Variable(tf.random_normal())
+body=tf.Variable(tf.random_normal())
+#八识
+aware=tf.Variable(tf.random_normal())
+Manas=tf.Variable(tf.random_normal())
+
+Alaya=(W*(eye,hear,nose,tongue,body,aware),b) #阿赖耶识应该是个数组，分为善，恶和非善非恶三个数组，用softmax区分善和恶，随机数组为非善非恶
+
+feed=F(W*Alaya,b)
+#因果论的逻辑--非线性逻辑回归
+#feed是因，acction是果，karma是业
+Karma=F(W*(feed,acction),b) #“种子起现行，现行熏种子”
+#因果论的自我进化其实用了深度强化学习
+reward=F(acction)
+#邪淫，吸毒等能给身体和意识带来愉快的是因为
+reward=happy_low(acction)
+
+#悟空就是觉醒，数学上用镜像函数来表示，佛为什么说每个人都有佛性，佛性其实是指的阿赖耶识的镜像函数，如来藏其实就是镜像中的阿赖耶识，下面是简单的模型验证
+mirror_Alaya==1，其实mirror_Alaya（佛性）一直存在
+#所以觉醒，证悟空性，其实是指
+anti_Alaya=mirror(Alaya)
+#证悟前
+eye=eye #看山是山
+#证悟后
+eye=mirror(eye) #看山还是山，是照见五蕴，但看到东西还是那些东西，差别就在镜子里的东西是不存入阿赖耶识的，一旦存入到阿赖耶识就意味着feed就产出了，就是有了"因"
+
+mirror_Alaya=mirror(Alaya)
+def mirror(Alaya):
+mirrorseye = mirror(eye)
+mirrorshear = mirror(hear)
+mirrorsnose = mirror(nose)
+mirrorstongue = mirror(tongue)
+mirrorsbody = mirror(body)
+corrupt=hate=delusion=Pride=suspect=0=format(eye,hear,nose,tongue,body)
+
+#空性当中其实包含了因果论
+emptiness=mirror_Alaya #你给mirror函数好的返回来的就是好的，你给镜像函数不好的反回来就是不好的。所谓种瓜得瓜，种豆得豆。
+#愿力是业的函数，
+Vow_Power=F(Karma)
+
+#证悟空性（2种方法）
+#方法1：闻思修。修行其实是自我强化学习业果的梯度下降，如果能收敛下去就能有成就，成就就是五毒减少，mirror被发现，。
+Karma = tf.reduce_mean(tf.reduce_sum(tf.square((real-Vow_Power)) #Vow_Power是愿力，real是真实
+Practice = tf.train.GradientDescentOptimizer(lr).minimize(Karma) # 选择梯度下降法，收敛的最低点就是镜像所在。lr是学习率，
+# 每个人天赋和努力程度是不一样的，所以lr=F(Talent，Effort)
+tantric=tf.train.AdamOptimizer(lr).minimize(Karma) #密法我的理解是修行的方便法门，数学上就是对实修的优化算法
+#修行多久能开悟呢？
+init = tf.global_variables_initializer()
+sess = tf.Session()
+sess.run(init)
+saver = tf.train.Saver(tf.global_variables(), max_to_keep=15)
+#开始修行
+for i in range(times):
+#loss_overfiting是衡量修行跑偏的程度
+loss_overfiting,trainr=sess.run([loss,train], feed_dict={xs: x_data, ys: y_data})
+#loss_dropout是矫正修行跑偏的函数
+loss_dropout, d_trainr = sess.run([d_loss, d_train], feed_dict={xs: x_data, ys: y_data,tf_is_training: True})
+#acc = 准确率反应的是修行的效果，越接机于1代表修行的越完美 # 偏差
+base_path = saver.save(sess, "mirror_all/mirror_Alaya.model")
+if(Alaya =mirror(Alaya)) #末那识如果对五蕴不做转换，不把看到，听到的东西存到alaiyeshi里面，那么alaiyeshi就类似一个空数据库，这样就不会产生因feed，也就不会有行为，就没有结果了，那么也就不造业了
+enlightment==mirror_Alaya==0
+#方法2：中阴得度
+if(中阴身把心识交给佛陀) # 宗喀巴大师就是中阴身成就
+enlightment == Alaya == 0
+
+#如来藏类似数据库的镜像，之前是把五蕴的东西存到里面，现在是数据库转换成了阿赖耶识的镜子，他虽然接受五蕴的东西进来，
+# 但是本身不存储而是照见五蕴皆空。看虽然看到那些东西了，但是内心不生意念，而是用意念照见五蕴。是善恶同体
+
+if(Alaya==mirror_Alaya) 道成肉身也是肉身道成。善恶一体。
+englightment==1
+
+#佛教的重大创新：把因果论在轮回中的运用
+# 把因果运用到了轮回。轮回因为看不见摸不着，所以人们不一定会相信这是真的存在的东西。但是因为因果是一个必然存在的东西，普遍存在的一个真理。而且他很容易得到证明。所以人们相信因果。把这种必然性的东西套在了一个看起来可能存在也可能不存在东西上面。就比较容易让人相信轮回也是必然的，然后。他在这个轮回里面建立一套体系，因为你承认轮回了，那么你要怎么去脱离了。轮回不好吗，佛说脱离轮回，你要怎么甩开这个不好的东西呢，那你就要听我的，我告诉你怎么去脱离这个轮回。佛教建立一套体系去教会你怎么样，脱离轮回进入到一种极乐的状态没有痛苦的状态。
+# 佛教核心价值：
+# 缘起性空。
+
+#  佛教里面的数学
+# 1：比较low的部分：无常
+# 无常数学上是随机，因果数学上是相关性。无常里面有因果其实就是贝叶斯概率分布 。简单讲就是偶然当中有必然，必然当中有偶然。贝叶斯其实讲的更精确，你是正太分布还是长尾分布。正太分布类似于偶然当中的必然，长尾相当于必然当中的偶然。但是概率密度分布显然比无常里面的因果要讲的精妙很多。“为利众生愿成佛”这句话其实是条件概率，相比起我不如地狱谁入地狱发心小了，信心弱了。
+# 2：高级部分：因果
+# 因果论看起来简单，但在佛教里面其实是比较高级的部分，并不是简单的种瓜得瓜这么简单。
+# 佛教的因果论其实包含三层
+# 1：必然性。
+# 2：线性回归和逻辑回归
+# 3：非线性回归
+# 好在现代数学已经很高级了，一个函数就包括了以上三种情况
+# Karma=F(W*(feed,acction),b)  #这个公式上面有解释
+# 3：超高级部分  空性
+# 证悟空性很多人穷尽一生业未必能开悟，所以是超高级部分。但空性本身却并不难理解，难得是保持觉照和修行本身（上面给出了2种修行方法）。要了解空性就要了解佛教讲的八识，五毒， 业，种子，现行有所了解
+# 假设开悟前emptiness=0，开悟后：emptiness=1
+# 它包括了2层意思：
+# 1：觉照的产生，就是阿赖耶识的镜像函数被观察到了，这点特别像量子力学中粒子的状态，量子力学说，粒子如果你不观察时处于叠加状态，你一观察就变了，佛教同样的说法是，一念天堂一念地狱，当然，佛教比量子力学讲的早了2500年
+# 2：业的转变。
+# 好了，那么证悟空性的函数是什么呢？看高僧如何印证你是否开悟的。
+# emptiness==1
+# 这是什么意思，其实如来藏从来就是恒长等于1的，就是一直都在的，只是你没觉照到，你觉照到了，空性也出现了。他是一体2面。
+#  上面的程序已经讲的很清楚了，不再重复。
+
+
+
+
+#福报：前世积累的资粮
+
+print(enlightment)
+
+未完，有空再写吧。

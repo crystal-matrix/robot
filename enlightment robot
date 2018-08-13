@@ -55,7 +55,7 @@ emptiness=mirror_Alaya #你给mirror函数好的返回来的就是好的，你�
 #愿力是业的函数，
 Vow_Power=F(Karma)
 
-#证悟空性（2种方法）
+#证悟空性（3种方法）
 #方法1：闻思修。修行其实是自我强化学习业果的梯度下降，如果能收敛下去就能有成就，成就就是五毒减少，mirror被发现，。
 Karma = tf.reduce_mean(tf.reduce_sum(tf.square((real-Vow_Power)) #Vow_Power是愿力，real是真实
 Practice = tf.train.GradientDescentOptimizer(lr).minimize(Karma) # 选择梯度下降法，收敛的最低点就是镜像所在。lr是学习率，
@@ -79,6 +79,33 @@ enlightment==mirror_Alaya==0
 #方法2：中阴得度
 if(中阴身把心识交给佛陀) # 宗喀巴大师就是中阴身成就
 enlightment == Alaya == 0
+
+#方法3：大圆满（也是属于本尊修法）--米拉日巴尊者和莲花生大士
+
+#如来藏类似数据库的镜像，之前是把五蕴的东西存到里面，现在是数据库转换成了阿赖耶识的镜子，他虽然接受五蕴的东西进来，
+# 但是本身不存储而是照见五蕴皆空。看虽然看到那些东西了，但是内心不生意念，而是用心识照见五蕴。是善恶同体
+
+if(Alaya==mirror_Alaya) 道成肉身也是肉身道成。善恶一体。
+englightment==1
+
+#自我强化学习=》有可能走向自我净化也有可能走向自我恶化  evil应该是一边净化心灵但同时享受身体乐趣的人。希特勒就是
+# def build_q_table(n_states, actions):
+#     table = pd.DataFrame(
+#         np.zeros((n_states, len(actions))),     # q_table initial values全0初始化
+#         columns=actions,    # actions's name
+#     )
+#     # print(table)    # show table
+#     return table
+#
+# N_STATES = close[n]   # 第一次到close的bar的距离，比如可以从第一根k线开始
+# ACTIONS = ['good', 'evil']     # available actions
+# EPSILON = 0.6   # greedy police就是说90%的时候选择最优的动作，10%选随机的动作
+# ALPHA = 0.1     # learning rate学习率  lr=F(Talent，Effort)
+# GAMMA = 0.9    # discount factor未来奖励的衰减度
+# MAX_EPISODES = 999999   # maximum episodes总共玩多少回合
+# FRESH_TIME = 0.3    # fresh time for one move每走一步花多长时间
+
+#heart-mind 心识  肉体 body
 
 #如来藏类似数据库的镜像，之前是把五蕴的东西存到里面，现在是数据库转换成了阿赖耶识的镜子，他虽然接受五蕴的东西进来，
 # 但是本身不存储而是照见五蕴皆空。看虽然看到那些东西了，但是内心不生意念，而是用意念照见五蕴。是善恶同体
@@ -113,31 +140,5 @@ englightment==1
 # 这是什么意思，其实如来藏从来就是恒长等于1的，就是一直都在的，只是你没觉照到，你觉照到了，空性也出现了。他是一体2面。
 #  上面的程序已经讲的很清楚了，不再重复。
 
-#方法3：大圆满（也是属于本尊修法）--米拉日巴尊者和莲花生大士
-
-#如来藏类似数据库的镜像，之前是把五蕴的东西存到里面，现在是数据库转换成了阿赖耶识的镜子，他虽然接受五蕴的东西进来，
-# 但是本身不存储而是照见五蕴皆空。看虽然看到那些东西了，但是内心不生意念，而是用心识照见五蕴。是善恶同体
-
-if(Alaya==mirror_Alaya) 道成肉身也是肉身道成。善恶一体。
-englightment==1
-
-#自我强化学习=》有可能走向自我净化也有可能走向自我恶化  evil应该是一边净化心灵但同时享受身体乐趣的人。希特勒就是
-# def build_q_table(n_states, actions):
-#     table = pd.DataFrame(
-#         np.zeros((n_states, len(actions))),     # q_table initial values全0初始化
-#         columns=actions,    # actions's name
-#     )
-#     # print(table)    # show table
-#     return table
-#
-# N_STATES = close[n]   # 第一次到close的bar的距离，比如可以从第一根k线开始
-# ACTIONS = ['good', 'evil']     # available actions
-# EPSILON = 0.6   # greedy police就是说90%的时候选择最优的动作，10%选随机的动作
-# ALPHA = 0.1     # learning rate学习率  lr=F(Talent，Effort)
-# GAMMA = 0.9    # discount factor未来奖励的衰减度
-# MAX_EPISODES = 999999   # maximum episodes总共玩多少回合
-# FRESH_TIME = 0.3    # fresh time for one move每走一步花多长时间
-
-#heart-mind 心识  肉体 body
 
 print(enlightment)
